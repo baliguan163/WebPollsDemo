@@ -1,2 +1,2 @@
-# WebPollsDemo
-基于django的web polls app
+# python_web_tools
+基于django的python_web_tools
