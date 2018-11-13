@@ -2,6 +2,9 @@ from django.contrib import admin
 from polls.models import  Poll,Choice
 
 # Register your models here.
+from spider.models import GoodsGroupbuying
+
+
 class ChoiceInline(admin.TabularInline):
     model = Choice
     extra = 4
@@ -20,3 +23,10 @@ class PollAdmin(admin.ModelAdmin):
     date_hierarchy = 'pub_date'
     
 admin.site.register(Poll,PollAdmin)
+
+
+class GoodsGroupbuyingAdmin(admin.ModelAdmin):
+    fields = ['goods_id', 'goods_name']
+
+
+admin.site.register(GoodsGroupbuying)

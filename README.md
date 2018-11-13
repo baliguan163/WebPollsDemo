@@ -2,6 +2,8 @@
 基于django的python_web_tools
 
 
+python manage.py startapp spider
+
 创建数据库表 或 更改数据库表或字段
 Django 1.7.1及以上 用以下命令
 # 1. 创建更改的文件
@@ -50,3 +52,22 @@ from django.contrib.auth.models import User
 user = User.objects.get(username = 'admin')
 user.set_password('123456')
 user.save()
+------------------------------------------------
+grant usage on schema public to root;
+grant create on schema public to root;
+------------------------------------------------
+
+Django根据现有数据库建立model
+Django引入外部数据库还是比较方便的，步骤如下 
+创建一个项目，修改seting文件，在setting里面设置你要连接的数据库类型和连接名称，地址之类，和创建新项目的时候一致 
+运行下面代码可以自动生成models模型文件 
+python manage.py inspectdb 
+这样就可以在命令行看到数据库的模型文件了
+
+把模型文件导入到app中 
+创建一个app 
+django-admin.py startapp app 
+python manage.py inspectdb > spider/models.py 
+ok模型文件已经生成好了。下面的工作就和之前一样了
+----------------------------------------------------------------------
+
