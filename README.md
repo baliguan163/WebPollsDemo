@@ -35,7 +35,7 @@ python manage.py flush
 
 
 创建超级管理员
-
+python manage.py createsuperuser
 
 
 

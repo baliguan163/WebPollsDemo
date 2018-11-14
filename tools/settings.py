@@ -59,7 +59,7 @@ ROOT_URLCONF = 'tools.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -88,11 +88,11 @@ WSGI_APPLICATION = 'tools.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
+        'NAME': 'tools',
         'HOST': '127.0.0.1',
         'USER': 'root',
         'PASSWORD': '123456',
-        'PORT': '3306',
+        'PORT': '3308',
     }
 }
 

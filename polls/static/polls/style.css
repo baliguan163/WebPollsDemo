@@ -1,0 +1,12 @@
+li a {
+    color: green;
+}
+
+/*我们在polls/static/polls/目录下创建一个用于存放图片的images子目录，在这个子目录里放入`background.gif文件。换句话说，*/
+                      /*这个文件的路径是polls/static/polls/images/background.gif。*/
+/*(你可以使用任何你想要的图片)*/
+/*在css样式文件polls/static/polls/style.css中添加下面的代码*/
+
+body {
+    background: white url("images/background.jpg") no-repeat right Top;
+}
